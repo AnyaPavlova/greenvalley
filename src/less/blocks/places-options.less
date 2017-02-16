@@ -1,0 +1,26 @@
+.places-options {
+	
+	background-image: url(../img/places-options-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 45px;
+
+	&__inner {
+		position: relative;
+		width: 780px;
+		height: 100%;
+		margin: 0 auto;	
+		display: flex;	
+		justify-content: space-between;
+
+		@media screen and (max-width:768px) {
+			width: 95%;
+		}
+		
+	}
+	&:after {
+		   content: '';
+		   display: block;
+		   clear: both;		    
+	}
+}

@@ -1,0 +1,65 @@
+.single-room {
+	padding-bottom: 10px;
+
+	&__inner {
+		position: relative;
+		width: 1180px;
+		height: 100%;
+		margin: 0 auto;		
+		padding-bottom: 50px;
+
+		@media screen and (max-width:768px) {
+			width: 100%;
+		}
+
+		&:after {
+		    content: '';
+		    display: block;
+		    clear: both;
+		}
+	}
+
+	&__basic-information {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items:flex-start;	
+		margin: 50px 0;
+
+		@media screen and (max-width:768px) {
+			flex-direction:column;
+			margin-bottom: 10px;
+		}
+	}
+	&__info-text {
+		width: 51%;
+
+		@media screen and (max-width:768px) {
+			order:2;
+			width: 90%;
+			margin: auto;
+		}
+	}
+	&__room-photo {
+		width: 49%;
+		/*max-height: 500px;*/
+
+		@media screen and (max-width:768px) {
+			order:1;
+			width: 100%;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__comfort {
+		display: flex;
+		justify-content: space-between;
+		align-items:center;	
+	}		
+	&__comfort-column {
+		width: 50%;
+	}
+	&__reserve {
+		text-align: center;
+	}
+}

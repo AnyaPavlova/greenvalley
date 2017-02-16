@@ -1,0 +1,32 @@
+.placement-item {
+	width: 380px;
+	background-color: #fff;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #ebebeb;
+
+	@media screen and (max-width:768px) {		
+		width: auto;
+		border: 2px solid #ebebeb;
+	}
+
+	&__img {
+		width: 100%;
+	}
+	&__img:hover {
+		opacity: 0.65;
+	}
+	&__info {
+		text-align: center;
+		padding: 30px 20px 40px;
+	}
+
+	&--bdr-green {
+		border-color: #21afa0;
+
+		@media screen and (max-width:768px) {
+			border: 1px solid #21afa0;	
+			max-width: 48.5%;		
+		}
+	}
+}

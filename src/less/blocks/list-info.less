@@ -1,0 +1,22 @@
+.list-info {
+	line-height: 1.4;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	list-style: none;
+
+	&__item {
+		position: relative;
+		padding-left: 8px;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 6px;
+			height: 10px;
+			position: absolute;
+			background-image: url(../img/li.png);
+			top: 5px;
+			left: -5px;
+		}
+	}
+}

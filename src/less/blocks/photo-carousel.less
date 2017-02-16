@@ -1,0 +1,25 @@
+.photo-carousel {
+	position: relative;	
+
+	&.owl-carousel .owl-nav .owl-prev,
+	&.owl-carousel .owl-nav .owl-next {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		display: block;
+		width: 60px;
+		height: 100%;
+		background-position: 20px center;
+		background-repeat: no-repeat;
+	}
+
+	&.owl-carousel .owl-nav .owl-prev {
+		  left: 20px;		  
+		  background-image: url(../img/reviews-carousel-left.png);
+	}
+	&.owl-carousel .owl-nav .owl-next {
+	    right: 20px; 
+	    background-image: url(../img/reviews-carousel-right.png);
+	}
+}

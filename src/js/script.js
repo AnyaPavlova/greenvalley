@@ -5,9 +5,10 @@ $(document).ready(function(){
  	items: 6,
  	center:true,
  	loop:true,
+ 	dots: false,
  	responsive: {
  		0: { items:2},
- 		768: { items:4 },
+ 		768: { items:6 },
  		1200: { items:6 }
  	}
  });
@@ -22,6 +23,7 @@ $(document).ready(function(){
 	 	items: 1,
 	 	center:true,
 	 	loop:true,
+	 	dots: false,
 	 	URLhashListener:true,
         startPosition: 'family'
  	});
@@ -32,17 +34,87 @@ $(document).ready(function(){
 	});
 
 	/*Карусель с отзывами*/	
-	$('#reviews-carousel-thumbs').owlCarousel({
- 	items: 2, 	
+	$('#reviews-carousel-thumbs').owlCarousel({ 		
  	nav:true,
  	navText:['',''],
- 	loop:true, 	
+ 	loop:true, 
+ 	dots: false,	
  	margin:20,
  	responsive: {
+ 		0: { items:1, nav:false},
+ 		768: { 
+ 			items:1, 
+ 			nav:false, 
+ 			autoplay:true,
+		    autoplayTimeout:3000,
+		    autoplayHoverPause:true
+ 		},
+ 		1200: { items:1 }
+ 	}
+ 	});
+
+ 	/*Карусель с акциями*/
+ 	 $('#stock-carousel-thumbs').owlCarousel({
+	 	items: 1,
+	 	center:true,
+	 	loop:true,
+	 	dots: true,
+ 	});
+
+ 	 /*присваиваем новый класс, если url room-list.html*/
+ 	 if (window.location.pathname == '/room-list.html')	{
+		$('.main-nav__link--active').addClass('main-nav__link--active-level1');
+	}
+	if (window.location.pathname == '/single-room.html')	{
+		$('.main-nav__link--active').addClass('main-nav__link--active-level2');
+	}
+
+	/*Карусель для одиночного номера*/
+	$('#photo-carousel-thumbs').owlCarousel({
+ 	items: 1, 	
+ 	nav:true,
+ 	navText:['',''],
+ 	loop:true, 
+ 	dots: false,	
+ 	});	
+
+ 	/*Открытие больших фоток*/
+	$(".photo-carousel__item").fancybox({
+	  maxWidth  : '100%',
+	  fitToView : false,
+	  autoSize  : false,
+	  closeClick  : false,
+	  openEffect  : 'none',
+	  closeEffect : 'none'
+	});
+
+	/*Бургер*/
+	$('#burger').on('click', function(e){
+		e.preventDefault();		
+		$('.main-nav__burger').toggleClass('main-nav__burger--close');
+		$('.main-nav__list').toggleClass('nav--visible');
+	});
+
+	/*Карусель для нижнего блока в номере*/	
+	$('#accommodation-thumbs').owlCarousel({ 
+ 	loop:true, 
+ 	dots: false,	 	
+ 	responsive: {
  		0: { items:1},
- 		768: { items:2 },
- 		1200: { items:2 }
+ 		768: { 
+ 			items:2, 
+ 			dots: true,
+ 			autoplay:true,
+		    autoplayTimeout:3000,
+		    autoplayHoverPause:true,
+		    margin:20
+ 		},
+ 		1200: { 
+ 			items:3,
+ 			margin:10,
+ 		}
  	}
  	});
 
 });
+

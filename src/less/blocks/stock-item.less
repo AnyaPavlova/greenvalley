@@ -1,0 +1,50 @@
+.stock-item {
+
+	position: relative;
+	text-align: left;
+	height: 338px;
+
+	@media screen and (max-width:768px) {
+		height: 300px;
+	}
+
+	&__info {
+		display: block;
+		width: 30%;
+		max-height: 120px;
+		position: absolute;
+		left: 0;
+		bottom: 7%;
+		background-color:rgba(255,255,255,0.95);
+		border-left: 1px solid #ebebeb;
+		padding: 20px;
+
+		@media screen and (max-width:768px) {
+			width: 40%;
+		}
+	}
+	&__title {
+		font-family: 'Fira Sans', sans-serif;
+		font-weight: 500;
+		color: #ff7435;
+		text-transform: uppercase;
+		padding-bottom: 10px;
+		font-size: 14px;
+		letter-spacing: 0.015em;
+
+		@media screen and (max-width:768px) {
+			font-size: 18px;
+		}		
+	}
+	&__text {
+		line-height: 1.25;
+	}
+	&__bg-img {
+		position: absolute;
+		top: -50%;
+
+		@media screen and (max-width:768px) {
+			top: -30%;
+		}
+	}
+}

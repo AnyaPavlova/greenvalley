@@ -28,6 +28,11 @@
 		background-size: cover;
 		min-height: 431px;
 		background-position: center center;
+
+		 @media screen and (max-width:768px) {
+		 	min-height: 320px;
+		 	background-position: left center;
+		 }
 	}
 	&--bg-family {
 		background-image: url(../img/promo-type-slider-family.jpg);
@@ -42,6 +47,11 @@
 		margin: 0 auto;
 		padding-top: 100px;
 		line-height: normal;
+
+		@media screen and (max-width:768px) {
+			width: 95%;
+			padding-top: 25px;
+		}
 	}
 	&__item-title {		
 		font-size: 36px;
@@ -50,6 +60,10 @@
 		letter-spacing: 0.05em;
 		border-left: 10px solid #fff;
 		position: relative;
+
+		@media screen and (max-width:768px) {
+			max-width: 100%;
+		}
 	}
 	&__text {
 		max-width: 50%;
@@ -60,6 +74,10 @@
 		letter-spacing: 0.015em;
 		border-left: 10px solid #fff;
 		position: relative;
+
+		@media screen and (max-width:768px) {
+			max-width: 100%;
+		}
 	}
 	&__item-bg {
 		background-color: #fff;

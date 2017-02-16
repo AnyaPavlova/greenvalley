@@ -3,6 +3,10 @@
 	margin: auto;	
 	position: relative;
 
+	@media screen and (max-width:768px) {
+		max-width: 62%;
+	}
+
 	&.owl-carousel .owl-nav .owl-prev {
 	    left: -45px;
 	    position: absolute;
@@ -28,6 +32,19 @@
 	&.owl-carousel .owl-stage-outer {
 		padding-top: 30px;
 		padding-bottom: 40px;
+
+		@media screen and (max-width:768px) {
+			//padding-bottom: 0;
+		}
+	}
+
+	&__group {
+		display: flex;
+		justify-content:space-between;
+
+		@media screen and (max-width:768px) {
+			flex-direction: column;
+		}
 	}
 
 }

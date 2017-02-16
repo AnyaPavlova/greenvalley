@@ -5,12 +5,19 @@
 	background-repeat: no-repeat;
 	text-align: center;
 
+	@media screen and (max-width:768px) {
+		background-position: center top;
+	}
+
 	&__inner {
 		position: relative;
 		width: 1180px;
 		height: 100%;
-		margin: 0 auto;
-		padding-top: 45px;
+		margin: 0 auto;	
+
+		@media screen and (max-width:768px) {
+			max-width: 80%;
+		}	
 
 		&:after {
 		    content: '';
@@ -24,15 +31,28 @@
 		margin: auto;
 		line-height: 1.4;
 		margin-top: 5px;
+
+		@media screen and (max-width:768px) {
+			max-width: 100%;
+		}
 	}
 
 	&__list {
 		display: flex;
 		margin: 30px 0 30px;
 		justify-content:center;
+
+		@media screen and (max-width:768px) {
+			flex-wrap:wrap;
+			margin-bottom: 0;
+		}
 	}
 	&__item {
-		padding: 0px 25px;
+		padding: 0px 25px;	
+
+		@media screen and (max-width:768px) {
+			margin-bottom: 30px;
+		}	
 	}
 	&__item-text {
 		font-size: 14px;

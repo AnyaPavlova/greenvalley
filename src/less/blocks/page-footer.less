@@ -1,0 +1,41 @@
+.page-footer {
+	border-top: 2px solid #ebebeb;
+
+	&__inner {
+	position: relative;
+	width: 1180px;
+	height: 100%;
+	margin: 0 auto;
+	min-height: 130px;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;	
+
+		@media screen and (max-width:768px) {
+			width: 95%;
+		}
+	}
+
+	&__adress,
+	&__contacts-us {
+		letter-spacing: 0.05em;
+		font-size: 14px;
+		line-height: 1.4;
+	}
+	&__phone,
+	&__mail {
+		text-decoration: none;
+		color: #191919;
+	}
+	&__phone:hover,
+	&__mail:hover {
+		text-decoration: underline;
+	}
+	&__social {
+		margin-top: 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items:center;	
+	}
+
+}
