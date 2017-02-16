@@ -5,9 +5,12 @@
 	margin-bottom: 20px;
 	border: 1px solid #ebebeb;
 
-	@media screen and (max-width:768px) {		
+	@media screen and (max-width:992px) {		
 		width: auto;
 		border: 2px solid #ebebeb;
+	}
+	@media screen and (max-width:500px) {
+		margin-bottom: 0;
 	}
 
 	&__img {
@@ -24,9 +27,13 @@
 	&--bdr-green {
 		border-color: #21afa0;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			border: 1px solid #21afa0;	
 			max-width: 48.5%;		
+		}
+
+		@media screen and (max-width:500px) {
+			max-width: 100%;
 		}
 	}
 }

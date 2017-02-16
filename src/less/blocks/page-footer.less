@@ -3,7 +3,7 @@
 
 	&__inner {
 	position: relative;
-	width: 1180px;
+	max-width: 1180px;
 	height: 100%;
 	margin: 0 auto;
 	min-height: 130px;
@@ -11,8 +11,12 @@
 	justify-content: space-between;
 	align-items:center;	
 
-		@media screen and (max-width:768px) {
-			width: 95%;
+		@media screen and (max-width:992px) {
+			max-width: 95%;
+		}
+
+		@media screen and (max-width:500px) {
+			justify-content: center;
 		}
 	}
 
@@ -21,11 +25,17 @@
 		letter-spacing: 0.05em;
 		font-size: 14px;
 		line-height: 1.4;
+		@media screen and (max-width:500px) {
+			display: none;
+		}
 	}
 	&__phone,
 	&__mail {
 		text-decoration: none;
 		color: #191919;
+		@media screen and (max-width:500px) {
+			display: none;
+		}
 	}
 	&__phone:hover,
 	&__mail:hover {

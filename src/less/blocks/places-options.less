@@ -13,8 +13,14 @@
 		display: flex;	
 		justify-content: space-between;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			width: 95%;
+		}
+
+		@media screen and (max-width:500px) {
+			/*flex-wrap:wrap;*/
+			width: 85%;
+			flex-direction:column;
 		}
 		
 	}

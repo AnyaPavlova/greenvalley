@@ -29,9 +29,12 @@
 		min-height: 431px;
 		background-position: center center;
 
-		 @media screen and (max-width:768px) {
+		 @media screen and (max-width:992px) {
 		 	min-height: 320px;
 		 	background-position: left center;
+		 }
+		 @media screen and (max-width:500px) {
+		 	padding-top: 20px;
 		 }
 	}
 	&--bg-family {
@@ -48,9 +51,14 @@
 		padding-top: 100px;
 		line-height: normal;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			width: 95%;
 			padding-top: 25px;
+		}
+		@media screen and (max-width:500px) {
+			text-align: center;
+			background-color: #fff;
+			padding-top: 5px;
 		}
 	}
 	&__item-title {		
@@ -61,12 +69,16 @@
 		border-left: 10px solid #fff;
 		position: relative;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			max-width: 100%;
+		}
+		@media screen and (max-width:500px) {
+			font-size: 18px;	
+			border-left: 0;		
 		}
 	}
 	&__text {
-		max-width: 50%;
+		max-width: 45%;
 		margin-top: 25px;
 		/*line-height: 24px;*/
 		font-size: 18px;
@@ -75,19 +87,30 @@
 		border-left: 10px solid #fff;
 		position: relative;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
+			max-width: 70%;
+		}
+		@media screen and (max-width:500px) {
+			font-size: 16px;
 			max-width: 100%;
+			border-left: 0;
 		}
 	}
 	&__item-bg {
 		background-color: #fff;
 		position:relative;	
 		left: 10px;			
+		@media screen and (max-width:500px) {
+			background-color: transparent;
+		}
 	}
 	&__item-bg-inner {
 		background-color: #fff;
 		position:relative;	
-		left: -10px;		
+		left: -10px;	
+		@media screen and (max-width:500px) {
+			background-color: transparent;
+		}	
 	}
 	&__switch {
 		text-align: center;

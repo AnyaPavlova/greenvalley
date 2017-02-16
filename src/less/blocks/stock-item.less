@@ -4,7 +4,7 @@
 	text-align: left;
 	height: 338px;
 
-	@media screen and (max-width:768px) {
+	@media screen and (max-width:992px) {
 		height: 300px;
 	}
 
@@ -19,8 +19,11 @@
 		border-left: 1px solid #ebebeb;
 		padding: 20px;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			width: 40%;
+		}
+		@media screen and (max-width:500px) {
+			width: 90%;
 		}
 	}
 	&__title {
@@ -32,7 +35,7 @@
 		font-size: 14px;
 		letter-spacing: 0.015em;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			font-size: 18px;
 		}		
 	}
@@ -43,8 +46,15 @@
 		position: absolute;
 		top: -50%;
 
-		@media screen and (max-width:768px) {
+		@media screen and (max-width:992px) {
 			top: -30%;
 		}
+
+		@media screen and (max-width:500px) {
+			top: 0;
+			height: 100%;
+			width: auto;
+		}		
 	}
+
 }

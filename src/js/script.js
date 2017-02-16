@@ -7,9 +7,9 @@ $(document).ready(function(){
  	loop:true,
  	dots: false,
  	responsive: {
- 		0: { items:2},
- 		768: { items:6 },
- 		1200: { items:6 }
+ 		0: { items:1},
+ 		500: { items:6 },
+ 		992: { items:6 }
  	}
  });
 	$('#photogallery-main-thumbs a').on('click', function(e){
@@ -41,15 +41,22 @@ $(document).ready(function(){
  	dots: false,	
  	margin:20,
  	responsive: {
- 		0: { items:1, nav:false},
- 		768: { 
+ 		0: { 
+ 			items:1, 
+ 			nav:false,
+ 			nestedItemSelector: 'reviews-item',
+ 			autoplay:true,
+		    autoplayTimeout:3000,
+		    autoplayHoverPause:true
+ 		},
+ 		500: { 
  			items:1, 
  			nav:false, 
  			autoplay:true,
 		    autoplayTimeout:3000,
 		    autoplayHoverPause:true
  		},
- 		1200: { items:1 }
+ 		992: { items:1 }
  	}
  	});
 
@@ -76,6 +83,17 @@ $(document).ready(function(){
  	navText:['',''],
  	loop:true, 
  	dots: false,	
+ 	responsive: {
+ 		0: { 
+ 			nav:false,
+ 		},
+ 		500: { 
+ 			nav:true,
+ 		},
+ 		992: { 
+ 			nav:true,
+ 		}
+ 	}
  	});	
 
  	/*Открытие больших фоток*/
@@ -100,16 +118,22 @@ $(document).ready(function(){
  	loop:true, 
  	dots: false,	 	
  	responsive: {
- 		0: { items:1},
- 		768: { 
+ 		0: { 
+ 			items:1, 			
+ 			autoplay:true,
+		    autoplayTimeout:3000,
+		    autoplayHoverPause:true,
+		    margin:20,
+ 		},
+ 		500: { 
  			items:2, 
  			dots: true,
  			autoplay:true,
 		    autoplayTimeout:3000,
 		    autoplayHoverPause:true,
-		    margin:20
+		    margin:20,
  		},
- 		1200: { 
+ 		992: { 
  			items:3,
  			margin:10,
  		}
