@@ -75,6 +75,9 @@ $(document).ready(function(){
 	if (window.location.pathname == '/single-room.html')	{
 		$('.main-nav__link--active').addClass('main-nav__link--active-level2');
 	}
+	if (window.location.pathname == '/form.html')	{
+		$('a').removeClass('main-nav__link--active');
+	}
 
 	/*Карусель для одиночного номера*/
 	$('#photo-carousel-thumbs').owlCarousel({
@@ -139,6 +142,31 @@ $(document).ready(function(){
  		}
  	}
  	});
+
+ 	/*Календарик*/
+ 	$( "#date-picker" ).datepicker({
+		dateFormat: "dd      mm      yy",
+		hangeMonth:true,
+	});
+	$( "#date-picker-end" ).datepicker({
+		dateFormat: "dd      mm      yy", 
+		hangeMonth:true,
+	});
+
+	//Виджет с переключение вкладок
+	$( "#type-cottage-tabs" ).tabs({
+    	heightStyle: "auto",
+    	collapsible:true,
+    	active: false,
+  	});
+	/*при клике на табе, делаем чек-бокс активным*/
+  	$('.type-cottage__type').on('click', function(e){
+  		e.preventDefault();
+		$(this).find('.type-cottage__radio').prop('checked', true);
+
+		$('.type-cottage__type').removeClass('arrow');
+		$(this).addClass('arrow');
+	});
 
 });
 

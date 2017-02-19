@@ -1,0 +1,30 @@
+.booking-pay-cart {
+	&__row {		
+		text-align: left;
+		margin-top: 25px;
+
+		&--big {
+			width: 60%;
+			float: left;
+			@media screen and (max-width:500px) {
+				width: 100%;
+				float: none;
+			}
+		}
+		&--small {
+			width: 36%;
+			float: right;
+
+			@media screen and (max-width:500px) {
+				width: 60%;
+				float: none;
+				margin-top: 0;
+			}
+		}
+	}	
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}

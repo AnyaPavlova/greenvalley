@@ -1,0 +1,49 @@
+.form-place {
+	border: 1px solid #ebebeb;
+	width: 380px;
+	margin: auto;
+	background-color: #fff;
+	min-height: 160px;
+	margin-bottom: 30px;
+
+	display: flex;
+	justify-content:space-around;
+	align-items:center;
+
+	background-image: url(../img/form-right.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	@media screen and (max-width:500px) {
+		width: 90%;
+	}
+
+	&__item {		
+		input[type="radio"] { 
+	    	display:none; 
+		}
+		input[type="radio"] + label {
+			font-size: 14px;
+			color: #4c4c4c;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			cursor: pointer;
+			display: block;
+
+			img {
+				opacity: 0.4;
+			}
+		}
+		input[type="radio"]:checked + label  {
+			color: #191919;
+			img {
+				opacity: 1;
+			}
+		}
+	}
+	&__img {
+		display: block;
+		padding-top: 15px;
+	}
+}
+

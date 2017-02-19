@@ -11,28 +11,24 @@
 		
 		<div class="booking">
 			<h1 class="title-page">Бронирование</h1>
-			<p class="booking__booking-info">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: +7 812 777-55-88</p>
+			<p class="booking__booking-info">Чтобы забронировать номер в отеле или коттедж, заполните форму ниже или просто позвоните по телефону: <a href="tel:+78127775588" class="booking__phone">+7 812 777-55-88</a></p>
 
 			<form action="" class="booking__booking-form">
 				
 				<div class="booking__step booking__step--gray">
 					<div class="booking__inner">
-						<h3 class="title-step">Шаг 1</h3>
-						<h2 class="title-block">Дата отдыха</h2>
+						<h3 class="booking__num-step">Шаг 1</h3>
+						<h2 class="booking__title">Дата отдыха</h2>
 						
-						<div class="form-block-input">
+						<div class="form-date">
 
-							<div class="form-block-input__item">
-								<p class="form-block-input__title">Дата въезда</p>
-								<input type="text" placeholder="ДД" class="form-block-input__input-date">
-								<input type="text" placeholder="ММ" class="form-block-input__input-month">
-								<input type="text" placeholder="ГГГГ" class="form-block-input__input-year">
+							<div class="form-date__item">
+								<p class="form-date__title">Дата въезда</p>
+								<input type="text" placeholder="ДД      ММ      ГГГГ" id="date-picker" class="form-date__input-date">
 							</div>
-							<div class="form-block-input__item">
-								<p class="form-block-input__title">Дата вЫезда</p>
-								<input type="text" placeholder="ДД" class="form-block-input__input-date">
-								<input type="text" placeholder="ММ" class="form-block-input__input-month">
-								<input type="text" placeholder="ГГГГ" class="form-block-input__input-year">
+							<div class="form-date__item">
+								<p class="form-date__title">Дата вЫезда</p>
+								<input type="text" placeholder="ДД      ММ      ГГГГ" id="date-picker-end" class="form-date__input-date">
 							</div>
 
 						</div>
@@ -41,18 +37,18 @@
 
 				<div class="booking__step">
 					<div class="booking__inner">
-						<h3 class="title-step">Шаг 2</h3>
-						<h2 class="title-block">Место проживания</h2>
+						<h3 class="booking__num-step">Шаг 2</h3>
+						<h2 class="booking__title">Место проживания</h2>
 						
-						<div class="form-block-input">
+						<div class="form-place">
 
-							<div class="form-block-input__item">
-								<input type="checkbox" id="input-hotel" name="location[]" value="Отель">								
-								<label for="input-hotel" class="form-block-input_input-hotel"><span></span>Отель</label>
+							<div class="form-place__item">
+								<input type="radio" id="input-hotel" name="location[]" value="Отель">								
+								<label for="input-hotel" class="form-place__input form-place__input--hotel"><span></span>Отель <img src="img/icon-hotel.png" alt="Отель" class="form-place__img"></label>
 							</div>
-							<div class="form-block-input__item">
-								<input type="checkbox" id="input-hotel" name="location[]" value="Коттедж">								
-								<label for="input-hotel" class="form-block-input_input-hotel"><span></span>Коттедж</label>
+							<div class="form-place__item">
+								<input type="radio" id="input-cottage" name="location[]" value="Коттедж">								
+								<label for="input-cottage" class="form-place__input form-place__input--cottage"><span></span>Коттедж <img src="img/icon-cottage.png" alt="Отель" class="form-place__img"></label>
 							</div>
 							
 						</div>
@@ -60,13 +56,331 @@
 				</div>
 
 				<div class="booking__step booking__step--gray">
-					<div class="booking__inner"></div>
+					<div class="booking__inner">
+						<h3 class="booking__num-step">Шаг 3</h3>
+						<h2 class="booking__title">Тип коттеджа</h2>
+
+						<div class="type-cottage" id="type-cottage-tabs">
+							
+							<ul class="type-cottage__title">
+
+								<li class="type-cottage__type">
+									<a href="#flagman" class="type-collage__link">
+										<input type="radio" id="input-flagman" name="typeCottage[]" value="Флагман" class="type-cottage__radio">								
+										<label for="input-flagman" class="type-cottage__input"><span></span>Флагман</label>
+									</a>
+								</li>
+
+								<li class="type-cottage__type">
+									<a href="#lacustrine" class="type-collage__link">
+										<input type="radio" id="input-lacustrine" name="typeCottage[]" value="Озёрный" class="type-cottage__radio">								
+										<label for="input-lacustrine" class="type-cottage__input"><span></span>Озёрный</label>
+									</a>
+								</li>
+
+								<li class="type-cottage__type" class="type-collage__link">
+									<a href="#olkhovka">
+										<input type="radio" id="input-olkhovka" name="typeCottage[]" value="Ольховка" class="type-cottage__radio">								
+										<label for="input-olkhovka" class="type-cottage__input"><span></span>Ольховка</label>
+									</a>
+								</li>
+
+								<li class="type-cottage__type" class="type-collage__link">
+									<a href="#port">
+										<input type="radio" id="input-port" name="typeCottage[]" value="Портовый" class="type-cottage__radio">								
+										<label for="input-port" class="type-cottage__input"><span></span>Портовый</label>
+									</a>
+								</li>
+
+							</ul>
+
+							<!--Флагман-->
+							<div id="flagman" class="type-cottage__info">
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Площадь 100м<sup>2</sup>
+									</div>
+								</div>								
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-room.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										3 комнаты
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-slep-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										5 спальных мест
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-bath.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Раздельный санузел
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-wi-fi.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Wi-Fi
+									</div>
+								</div>
+							</div>
+
+							<!--Озерный-->
+							<div id="lacustrine" class="type-cottage__info">
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Площадь 80м<sup>2</sup>
+									</div>
+								</div>								
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-room.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										2 комнаты
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-slep-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										4 спальных мест
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-bath.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Раздельный санузел
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-wi-fi.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Wi-Fi
+									</div>
+								</div>
+							</div>
+
+							<!--Ольховка-->
+							<div id="olkhovka" class="type-cottage__info">
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Площадь 70м<sup>2</sup>
+									</div>
+								</div>								
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-room.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										1 комната
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-slep-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										3 спальных мест
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-bath.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Совмещенный санузел
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-wi-fi.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Wi-Fi
+									</div>
+								</div>
+							</div>
+
+							<!--Портовый-->
+							<div id="port" class="type-cottage__info">
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Площадь 50м<sup>2</sup>
+									</div>
+								</div>								
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-room.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										1 комната
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-slep-sq.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										2 спальных мест
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-bath.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Туалет на улице
+									</div>
+								</div>
+								<div class="type-cottage__info-item">
+									<div class="type-cottage__info-photo">
+										<img src="img/type-cottage-wi-fi.png" alt="">
+									</div>
+									<div class="type-cottage__info-text">
+										Wi-Fi
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
 				</div>
+
 				<div class="booking__step">
-					<div class="booking__inner"></div>
+					<div class="booking__inner">
+						<h3 class="booking__num-step">Шаг 4</h3>
+						<h2 class="booking__title">Персональная информация</h2>
+
+							<div class="personal-info">
+								<div class="personal-info__row">
+									<div class="personal-info__item">
+										<input name="name" type="text" placeholder="Имя" class="input-text-info" required>
+									</div>																			
+								</div>
+
+								<div class="personal-info__row">
+									<div class="personal-info__item">
+										<input name="family" type="text" placeholder="Фамилия" class="input-text-info" required>
+									</div>																	
+								</div>	
+
+								<div class="personal-info__row">									
+									<div class="personal-info__item">
+										<input name="phone" type="text" placeholder="Номер телефона" class="input-text-info" required>
+										<p class="text-after-input">Мы свяжемся с вами в случае необходимости.</p>
+									</div>											
+								</div>
+
+								<div class="personal-info__row">									
+									<div class="personal-info__item">
+										<input name="email" type="text" placeholder="Email" class="input-text-info" required>
+										<p class="text-after-input">На этот адрес мы вышлем вам подтверждение о забронированном номере.</p>
+									</div>									
+								</div>	
+
+							</div>
+
+					</div>
 				</div>
+
 				<div class="booking__step booking__step--gray">
-					<div class="booking__inner"></div>
+					<div class="booking__inner">
+						<h3 class="booking__num-step">Шаг 5</h3>
+						<h2 class="booking__title">Способ оплаты</h2>
+
+						<div class="booking-pay">
+
+							<div class="booking-pay__inner">
+								<div class="booking-pay__result">
+									<div class="booking-pay__info">
+										<p class="booking-pay__title">К оплате</p>
+										<p class="booking-pay__cost">-</p>
+										<p class="text-after-input"><img src="img/booking-error.png" alt="Ошибка при оплате" class="booking-pay__err">Пожалуйста, <a href="" class="booking-pay__link">выберите дату</a> въезда и выезда, чтобы увидеть сумму к оплате</p>
+									</div>
+								</div>
+
+								<div class="booking-pay__choise">
+									<div class="booking-pay__item">
+										<div class="booking-pay__elem">
+											<div class="booking-pay__radio">
+												<input type="radio" id="input-pay-after" name="typePay[]" value="по приезду">								
+												<label for="input-pay-after" class="type-pay__input type-Pay__input--flagman"><span></span>По приезду</label>	
+											</div>
+											<div class="text-after-input">Вы можете произвести оплату по факту заселения.</div>		
+										</div>					
+									</div>
+
+									<div class="booking-pay__item">
+										<div class="booking-pay__elem">
+											<div class="booking-pay__radio">
+												<input type="radio" id="input-pay-now" name="typePay[]" value="Сейчас">								
+												<label for="input-pay-now" class="type-pay__input type-cottage__input--lacustrine"><span></span>Сейчас</label>								
+											</div>
+											<div class="text-after-input">Прямо сейчас вы можете произвести оплату с помощью банковской карты.</div>
+										</div>		
+
+										<div class="booking-pay-cart">
+											<div class="booking-pay-cart__row booking-pay-cart__row--big">
+												<div class="booking-pay-cart__item">
+													<p class="booking-pay__title">Номер карты</p>
+													<input name="numberCart" type="text" placeholder="0000-0000-0000-0000" class="input-text-info" required>											
+												</div>	
+												<div class="booking-pay-cart__item">
+													<p class="booking-pay__title">Фамилия владельца карты</p>
+													<input name="fioCart" type="text" placeholder="Lika Moon" class="input-text-info" required>											
+												</div>									
+											</div>
+											<div class="booking-pay-cart__row booking-pay-cart__row--small">
+												<div class="booking-pay-cart__item">
+													<p class="booking-pay__title">Код CvV <a href="#" class="booking-pay__qw"></a></p>
+													<input name="CvV" type="text" placeholder="123" class="input-text-info" required>											
+												</div>	
+												<div class="booking-pay-cart__item">
+													<p class="booking-pay__title">действует до</p>
+													<input name="fioCart" type="text" placeholder="01 / 2018" class="input-text-info" required>											
+												</div>									
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="booking__send">
+							<button class="btn btn--green btn--big" type="submit">Забронировать</button>
+						</div>
+
+					</div>
 				</div>
 
 			</form>

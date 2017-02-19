@@ -33,13 +33,15 @@
 	&__mail {
 		text-decoration: none;
 		color: #191919;
+		display: inline-block;
+		line-height: 1;
 		@media screen and (max-width:500px) {
 			display: none;
 		}
 	}
 	&__phone:hover,
 	&__mail:hover {
-		text-decoration: underline;
+		border-bottom: 1px dashed #191919;
 	}
 	&__social {
 		margin-top: 10px;

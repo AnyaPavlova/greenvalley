@@ -1,0 +1,28 @@
+.personal-info {
+	max-width: 780px;
+	margin: auto;
+
+	@media screen and (max-width:992px)  {
+		max-width: 94%;
+	}
+	@media screen and (max-width:500px) {
+		max-width: 90%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__row {
+		width: 47%;
+		float: left;
+		&:nth-child(2n) {
+			float: right;
+		}
+		@media screen and (max-width:992px)  {
+			width: 48.5%;
+		}
+		@media screen and (max-width:500px) {
+			width: 100%;			
+		}
+
+	}
+}

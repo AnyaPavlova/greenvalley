@@ -1,0 +1,154 @@
+.booking-pay {
+	max-width: 780px;
+	margin: 0 auto 47px;
+
+	@media screen and (max-width:992px) {
+		max-width: 100%;		
+	}		
+
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+		
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items:stretch;
+
+		@media screen and (max-width:500px) {
+			flex-direction: column;
+		}
+	}
+
+	&__result {
+		width: 35%;		
+		border: 1px solid #ebebeb;
+		background-color: #fff;
+		align-self:stretch;
+		padding: 30px 20px;
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+			order:2;
+			margin-top: 25px;
+			padding: 30px 50px;
+		}
+	}
+
+	&__choise {
+		width: 62%;		
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+			order:1;
+		}
+	}
+	&__item {
+		border: 1px solid #ebebeb;
+		background-color: #fff;
+		padding: 30px 20px;
+
+		&:first-child {
+			margin-bottom: 20px;
+		}
+
+		@media screen and (max-width:500px) {
+			padding: 30px 50px;
+		}
+	}
+	&__title {
+		text-transform: uppercase;
+		font-size: 14px;
+		color: #4c4c4c;
+		letter-spacing: 0.05em;
+		padding-bottom: 15px;
+		position: relative;
+	}
+	&__cost {
+		padding-bottom: 15px;
+		font-size: 24px;
+		font-weight: 500;
+		color: #191919;
+		letter-spacing: 0.05em;
+	}
+	&__err {
+		padding-right: 5px;
+	}
+	&__link {
+		color: #4c4c4c;
+		border-bottom: 1px dashed #4c4c4c;
+		text-decoration: none;
+		line-height: 1.1;
+		display: inline-block;
+		&:hover {
+			border-bottom: 0;
+		}
+	}
+
+	&__elem {
+		display: flex;
+		text-align: left;
+
+		@media screen and (max-width:500px) {
+			display: block;
+			
+			.text-after-input {
+				display: none;
+			}
+		}
+	}
+	&__radio {
+		min-width: 150px;
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #4c4c4c;		
+		font-weight: 500;
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+		}
+
+		input[type="radio"] { 
+	    	display:none; 
+		}
+		input[type="radio"] + label {			
+			cursor: pointer;
+			display: block;			
+			padding-top: 2px;
+		}
+		input[type="radio"] + label span {		
+		    width: 16px;
+		    height: 12px;
+		    display: inline-block;
+		    background-image: url(../img/check-no.png);
+		    margin-right: 15px;
+		}
+		input[type="radio"]:checked + label  {
+			color: #191919;
+		}
+		input[type="radio"]:checked + label span {
+			background-image: url(../img/check-ok.png);
+		}
+	}
+	&__qw {
+		position: absolute;
+		display: block;
+		width: 16px;
+		height: 17px;
+		top: 0;
+		right: 0;
+		background-image: url(../img/qw.png);
+
+		@media screen and (max-width:500px) {
+			display: none;
+		}
+	}
+	&__qw:hover {
+		opacity: 0.7;
+	}
+
+}

@@ -1,0 +1,79 @@
+.form-date {
+	border: 1px solid #ebebeb;
+	width: 380px;
+	margin: auto;
+	background-color: #fff;
+	min-height: 140px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content:space-around;
+	background-image: url(../img/form-right.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	@media screen and (max-width:992px) {
+		background-color: transparent;
+		background-image: none;
+		border: 0;
+	}
+	@media screen and (max-width:500px) {
+		display: block;
+		max-width: 100%;
+	}
+
+
+	&__title {
+		padding-top: 30px;
+		padding-bottom: 15px;
+		text-transform: uppercase;
+		color: #4c4c4c;
+		line-height: 1.3;
+		letter-spacing: 0.05em;
+	}
+	&__input-date {
+		width: 134px;
+		height: 27px;
+		/*border: 1px solid #ebebeb;*/
+		font-size: 14px;
+		font-weight: 500;
+		color: #0ab89d;
+		text-align: center;
+		background-image: url(../img/date-bg.png);
+
+		@media screen and (max-width:992px) {
+			width: 179px;
+			height: 50px;
+			background-image: url(../img/date-bg-ipad.png);
+			font-size: 19px;
+		}
+	}
+
+	.ui-widget-header {
+		background-color: #ff7435 !important;
+	}		
+}
+
+.form-date input::-webkit-input-placeholder {
+	color: #979696;
+	opacity: 1;
+	text-align: center;
+}
+.form-date input::-moz-placeholder { /* Firefox 19+ */
+	color: #979696;
+	opacity: 1;
+	text-align: center;
+	}
+.form-date input:-ms-input-placeholder {
+	color: #979696;
+	opacity: 1;
+	text-align: center;
+}
+.form-date input:-moz-placeholder { /* Firefox 18- */
+	color: #979696;
+	opacity: 1;
+	text-align: center;
+}
+.form-date input:focus::-webkit-input-placeholder {color: transparent}
+.form-date input:focus::-moz-placeholder          {color: transparent}
+.form-date input:focus:-moz-placeholder           {color: transparent}
+.form-date input:focus:-ms-input-placeholder      {color: transparent}
